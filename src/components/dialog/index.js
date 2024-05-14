@@ -11,12 +11,12 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export function AddTodoDialog({todoDialog,setTodoDialog,todoFormData,setTodoFormData,handleFormSubmit}) {
+export function AddTodoDialog({todoDialog,setTodoDialog,todoFormData,setTodoFormData,handleFormSubmit,editData}) {
   return (
     <Dialog open={todoDialog} onOpenChange={setTodoDialog}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Add Task</DialogTitle>
+          <DialogTitle>{editData ? "Edit Task" : "Add Task"}</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
@@ -37,7 +37,7 @@ export function AddTodoDialog({todoDialog,setTodoDialog,todoFormData,setTodoForm
           </div>
         </div>
         <DialogFooter>
-          <Button type="button" onClick={handleFormSubmit}>Save</Button>
+          <Button type="button" onClick={handleFormSubmit}>{editData ? "Edit" : "Save"}</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
