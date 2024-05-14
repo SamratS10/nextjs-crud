@@ -9,7 +9,7 @@ const BlogOverview = () => {
     const initialData = {
         title: "",
         description: "",
-        _id: "", // Include id to use it in update request
+        _id: "", 
     };
     const [todoDialog, setTodoDialog] = useState(false);
     const [editData, setEditData] = useState(false);
@@ -52,7 +52,6 @@ const BlogOverview = () => {
                 setTodoFormData(initialData);
                 setTodoDialog(false);
                 setEditData(false);
-                // Optionally, update the local state or refetch data if needed
                 const updatedData = await fetch("/api/get-todo", {
                     method: "GET",
                     cache: "no-store",

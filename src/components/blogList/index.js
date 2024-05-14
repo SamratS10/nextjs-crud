@@ -31,7 +31,7 @@ const BlogList = ({ list, setEditData, setTodoFormData, setTodoDialog }) => {
         setTodoFormData({
             title: title,
             description: description,
-            _id: _id, // Include the id if you need it for the update request
+            _id: _id, 
         });
     };
 
