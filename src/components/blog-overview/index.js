@@ -61,6 +61,7 @@ const BlogOverview = () => {
                     const { data } = updatedResponse;
                     setTodoData(data);
                 }
+                window.location.reload()
             }
         } catch (e) {
             console.log(e.message);
